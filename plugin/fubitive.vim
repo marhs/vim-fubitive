@@ -7,7 +7,7 @@ function! s:bitbucket_url(opts, ...) abort
     return ''
   endif
   let path = substitute(a:opts.path, '^/', '', '')
-  let domain_pattern = 'bitbucket\.org'
+  let domain_pattern = 'bitbucket\.prod\.aws\.about\.com'
   let domains = exists('g:fugitive_bitbucket_domains') ? g:fugitive_bitbucket_domains : []
   for domain in domains
     let domain_pattern .= '\|' . escape(split(domain, '://')[-1], '.')
